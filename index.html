@@ -6,6 +6,25 @@
   <title>Hidrausystem — Especialistas em Reparo de Direção Automotiva | São Paulo</title>
   <meta name="description" content="Reparo de direção hidráulica e elétrica em São Paulo. +20 anos de experiência, diagnóstico grátis e garantia. Atendemos todas as marcas e modelos. Zona Sul - SP." />
 
+  <!-- Google tag (GA4 + Google Ads) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZM7GL0XE6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QZM7GL0XE6');
+    gtag('config', 'AW-7462670338');
+
+    // Clique em ligar (tel:) = evento GA4 + conversão Google Ads
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href^="tel:"]');
+      if (!a) return;
+      gtag('event', 'click_ligar', { event_category: 'contato', event_label: a.getAttribute('href') });
+      // Descomente e preencha com o rótulo da conversão do Google Ads:
+      // gtag('event', 'conversion', { send_to: 'AW-7462670338/ROTULO_CONVERSAO' });
+    });
+  </script>
+
   <!-- Fontes (Design System: Poppins / Inter) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
